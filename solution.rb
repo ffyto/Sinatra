@@ -1,17 +1,28 @@
 require 'sinatra'
 
 #saludame 1
-get '/' do
-  if !params[:nombre] or params[:nombre] == ''
-    @name = "desconocido"
-  else
-    @name = params[:nombre]
-  end
-  erb :saludame1
-end
+# get '/' do
+#   if !params[:nombre] or params[:nombre] == ''
+#     @name = "desconocido"
+#   else
+#     @name = params[:nombre]
+#   end
+#   erb :saludame
+# end
 
 #saludame 2
 get '/makers/:name' do
   @name = params[:name].capitalize
-  erb :saludame1
+  erb :saludame
 end
+
+#saludame 3
+get '/' do
+  erb :form
+end
+
+post '/saludo' do
+  @name = params[:name]
+  erb :saludame
+end
+

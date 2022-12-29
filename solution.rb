@@ -1,10 +1,10 @@
 require 'sinatra'
 
 get '/' do
-  unless params[:name]
+  unless params[:nombre]
     @name = "desconocido"
   else
-    @name = params[:name]
+    @name = params[:nombre]
   end
   erb :saludame1
 end

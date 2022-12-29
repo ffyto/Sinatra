@@ -1,0 +1,8 @@
+<h1>My First Project</h1>
+<form action='/new/object' method='post'>
+  <input type='text' name='verb'/>
+  <button type='submit'>I am creating a new object using a POST</button>
+</form>
+<% if @name %>
+  <h1><%= @name %></h1>
+<% end %>

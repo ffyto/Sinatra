@@ -2,8 +2,9 @@ require 'sinatra'
 
 get '/' do
   unless params[:name]
-    "Hola desconocido!"
+    @name = "desconocido"
   else
-    "Hola #{params[:name]}!"
+    @name = params[:name]
   end
+  erb :saludame1
 end

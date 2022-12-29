@@ -1,7 +1,7 @@
 require 'sinatra'
 
 get '/' do
-  unless params[:nombre]
+  if !params[:nombre] or params[:nombre] == ''
     @name = "desconocido"
   else
     @name = params[:nombre]

@@ -1,5 +1,5 @@
 <h1>Hola</h1>
-<% @numbers.each do |number| %>
+<% (1..50).each do |number| %>
   <p><strong><%= number % 2 == 0 ? "#{number} Soy Par!" : "#{number} Soy Impar!" %></strong></p>
   <br/>
 <% end %>

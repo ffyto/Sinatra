@@ -34,7 +34,5 @@ require 'sinatra'
 # end
 
 get '/' do
-  @par_impar = ''
-  @numbers = (1..50).to_a
   erb :evenOdd
 end

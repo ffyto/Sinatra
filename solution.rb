@@ -27,10 +27,14 @@ require 'sinatra'
 # end
 
 #El Código Secreto
+# get '/' do
+#   <<-HTML
+#     <h1>HcUy6Re2LLBRtj</h1>
+#   HTML
+# end
+
 get '/' do
-  <<-HTML
-    <h1>HcUy6Re2LLBRtj</h1>
-  HTML
+  @par_impar = ''
+  @numbers = (1..50).to_a
+  erb :evenOdd
 end
-
-

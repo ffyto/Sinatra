@@ -39,23 +39,29 @@ require 'sinatra'
 # end
 
 #suma_numeros
-# get '/' do
-#   erb :sum
-# end
+get '/' do
+  @number = 0
+  erb :counter
+end
+
+post '/:num' do
+  @number = params[:num].to_i
+  erb :counter
+end
 
 #la abuela sorda
-get '/' do
-  erb :formGrandma
-end
+# get '/' do
+#   erb :formGrandma
+# end
 
-post '/respuesta' do
-  if params[:text] == params[:text].upcase
-    <<-HTML
-    <h1>Ahhh si, manzanas!</h1>
-    HTML
-  else
-    <<-HTML
-    <h1>Habla más duro mijito</h1>
-    HTML
-  end
-end
+# post '/respuesta' do
+#   if params[:text] == params[:text].upcase
+#     <<-HTML
+#     <h1>Ahhh si, manzanas!</h1>
+#     HTML
+#   else
+#     <<-HTML
+#     <h1>Habla más duro mijito</h1>
+#     HTML
+#   end
+# end

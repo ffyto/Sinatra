@@ -11,18 +11,26 @@ require 'sinatra'
 # end
 
 #saludame 2
-get '/makers/:name' do
-  @name = params[:name].capitalize
-  erb :saludame
-end
+# get '/makers/:name' do
+#   @name = params[:name].capitalize
+#   erb :saludame
+# end
 
-#saludame 3
+# #saludame 3
+# get '/' do
+#   erb :form
+# end
+
+# post '/saludo' do
+#   @name = params[:name]
+#   erb :saludame
+# end
+
+#El Código Secreto
 get '/' do
-  erb :form
+  <<-HTML
+    <h1>HcUy6Re2LLBRtj</h1>
+  HTML
 end
 
-post '/saludo' do
-  @name = params[:name]
-  erb :saludame
-end
 

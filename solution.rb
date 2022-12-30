@@ -33,6 +33,29 @@ require 'sinatra'
 #   HTML
 # end
 
+#par_impar
+# get '/' do
+#   erb :evenOdd
+# end
+
+#suma_numeros
+# get '/' do
+#   erb :sum
+# end
+
+#la abuela sorda
 get '/' do
-  erb :evenOdd
+  erb :formGrandma
+end
+
+post '/respuesta' do
+  if params[:text] == params[:text].upcase
+    <<-HTML
+    <h1>Ahhh si, manzanas!</h1>
+    HTML
+  else
+    <<-HTML
+    <h1>Habla más duro mijito</h1>
+    HTML
+  end
 end

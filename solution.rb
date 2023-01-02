@@ -67,10 +67,7 @@ require 'sinatra'
 # end
 
 #headers
-require 'sinatra'
-require 'json'
 
-get '/view-headers' do
-  content_type :text
-  puts JSON.pretty_generate(request.env)
+get '/' do
+  puts request.env['HTTP_USER_AGENT']
 end

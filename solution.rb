@@ -73,9 +73,5 @@ require 'sinatra'
 
 #Sin Permiso!
 get '/' do
-  if request.env['HTTP_PERMISO'] == "soy-un-token-secreto"
-    'Si lo logramos!'
-  else
-    'Sin Permiso'
-  end
+  request.env['HTTP_PERMISO'] == "soy-un-token-secreto" ? 'Si lo logramos!' : 'Sin Permiso'
 end
